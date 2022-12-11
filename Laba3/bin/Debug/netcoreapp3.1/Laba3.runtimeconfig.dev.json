@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\gta76\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gta76\\.nuget\\packages"
+    ]
+  }
+}
