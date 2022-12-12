@@ -55,7 +55,7 @@ namespace Laba3
             this.queueSizeBtn = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.enqueueBtn = new System.Windows.Forms.Button();
-            this.logBtn = new System.Windows.Forms.Button();
+            this.showLogsBtn = new System.Windows.Forms.Button();
             this.sortStackBtn = new System.Windows.Forms.Button();
             this.sortDequeBtn = new System.Windows.Forms.Button();
             this.sortQueueBtn = new System.Windows.Forms.Button();
@@ -64,7 +64,8 @@ namespace Laba3
             this.findInDeque = new System.Windows.Forms.Button();
             this.findInQueue = new System.Windows.Forms.Button();
             this.searchElementBox = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.writeLogsBtn = new System.Windows.Forms.Button();
+            this.clearfileBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stackValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dequeValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.queueValue)).BeginInit();
@@ -337,14 +338,15 @@ namespace Laba3
             this.enqueueBtn.UseVisualStyleBackColor = true;
             this.enqueueBtn.Click += new System.EventHandler(this.enqueueBtn_Click);
             // 
-            // logBtn
+            // showLogsBtn
             // 
-            this.logBtn.Location = new System.Drawing.Point(683, 395);
-            this.logBtn.Name = "logBtn";
-            this.logBtn.Size = new System.Drawing.Size(105, 43);
-            this.logBtn.TabIndex = 28;
-            this.logBtn.Text = "SHOW LOGS";
-            this.logBtn.UseVisualStyleBackColor = true;
+            this.showLogsBtn.Location = new System.Drawing.Point(683, 395);
+            this.showLogsBtn.Name = "showLogsBtn";
+            this.showLogsBtn.Size = new System.Drawing.Size(105, 43);
+            this.showLogsBtn.TabIndex = 28;
+            this.showLogsBtn.Text = "SHOW LOGS";
+            this.showLogsBtn.UseVisualStyleBackColor = true;
+            this.showLogsBtn.Click += new System.EventHandler(this.showLogsBtn_Click);
             // 
             // sortStackBtn
             // 
@@ -423,21 +425,33 @@ namespace Laba3
             this.searchElementBox.TabIndex = 37;
             this.searchElementBox.ValueChanged += new System.EventHandler(this.searchElementBox_ValueChanged);
             // 
-            // button1
+            // writeLogsBtn
             // 
-            this.button1.Location = new System.Drawing.Point(572, 395);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 43);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "WRITE LOGS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.writeLogsBtn.Location = new System.Drawing.Point(572, 395);
+            this.writeLogsBtn.Name = "writeLogsBtn";
+            this.writeLogsBtn.Size = new System.Drawing.Size(105, 43);
+            this.writeLogsBtn.TabIndex = 38;
+            this.writeLogsBtn.Text = "WRITE LOGS";
+            this.writeLogsBtn.UseVisualStyleBackColor = true;
+            this.writeLogsBtn.Click += new System.EventHandler(this.writeLogsBtn_Click);
+            // 
+            // clearfileBtn
+            // 
+            this.clearfileBtn.Location = new System.Drawing.Point(461, 395);
+            this.clearfileBtn.Name = "clearfileBtn";
+            this.clearfileBtn.Size = new System.Drawing.Size(105, 43);
+            this.clearfileBtn.TabIndex = 39;
+            this.clearfileBtn.Text = "CLEAR FILE LOGS";
+            this.clearfileBtn.UseVisualStyleBackColor = true;
+            this.clearfileBtn.Click += new System.EventHandler(this.clearfileBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.clearfileBtn);
+            this.Controls.Add(this.writeLogsBtn);
             this.Controls.Add(this.searchElementBox);
             this.Controls.Add(this.findInQueue);
             this.Controls.Add(this.findInDeque);
@@ -446,7 +460,7 @@ namespace Laba3
             this.Controls.Add(this.sortQueueBtn);
             this.Controls.Add(this.sortDequeBtn);
             this.Controls.Add(this.sortStackBtn);
-            this.Controls.Add(this.logBtn);
+            this.Controls.Add(this.showLogsBtn);
             this.Controls.Add(this.dequeueBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.queueEmptyBtn);
@@ -512,7 +526,7 @@ namespace Laba3
         private System.Windows.Forms.Button queueSizeBtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button enqueueBtn;
-        private System.Windows.Forms.Button logBtn;
+        private System.Windows.Forms.Button showLogsBtn;
         private System.Windows.Forms.Button sortStackBtn;
         private System.Windows.Forms.Button sortDequeBtn;
         private System.Windows.Forms.Button sortQueueBtn;
@@ -521,7 +535,8 @@ namespace Laba3
         private System.Windows.Forms.Button findInDeque;
         private System.Windows.Forms.Button findInQueue;
         private System.Windows.Forms.NumericUpDown searchElementBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button writeLogsBtn;
+        private System.Windows.Forms.Button clearfileBtn;
     }
 }
 

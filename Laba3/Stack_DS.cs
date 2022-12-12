@@ -6,7 +6,6 @@ namespace Laba3
 {
     class Stack_DS
     {
-/*        Logs logs = new Logs();*/
         List<int> stack = new List<int>();
 
         public bool IsEmpty()
@@ -17,25 +16,21 @@ namespace Laba3
         public void Push(int value)
         {
             stack.Add(value);
-/*            logs.appendLog("stack", "push", value);*/
         }
 
         public void Pop()
         {
             if (stack.Count > 0)
                 stack.RemoveAt(stack.Count - 1);
-/*            logs.appendLog("stack", "pop", -1);*/
         }
 
         public void Sort()
         {
             stack.Sort();
-/*            logs.appendLog("stack", "sort", -1);*/
         }
 
         public bool inStack(int value)
         {
-/*            logs.appendLog("stack", "inStack", -1);*/
             return stack.Contains(value);
         }
 
@@ -50,7 +45,6 @@ namespace Laba3
         }
         public string Top()
         {
-/*            logs.appendLog("stack", "top", -1);*/
             return stack[stack.Count - 1].ToString();
         }
     }

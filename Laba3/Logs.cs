@@ -1,27 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace Laba3
 {
     class Logs
     {
         List<string> logs = new List<string>();
-        
-        public void appendLog(string from, string method, int value)
+
+        public void appendLog(string from, string method)
         {
-            string valString = value.ToString();
             DateTime dt = DateTime.Now;
-            string sDate = dt.ToShortDateString();
-            if (value == -1)
-                logs.Add(sDate + " " + from + ": " + method + " method");
-            else
-                logs.Add(sDate + " " + from + ": " + method + " method, value: " + valString);
+            string log = $"{dt} | {from} : {method} method";
+            logs.Add(log);
         }
 
-        public string printLog(int index)
+        public List<string> getLogsArray()
         {
-            return logs[index];
+            return logs;
+        }
+
+        public void writeLogsInFile()
+        {
+            var path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Logs.txt"));
+            using (StreamWriter file = new StreamWriter(path, append: true))
+            {
+                logs.ForEach(delegate (string line)
+                {
+                    file.WriteLine(line);
+                });
+            }
+        }
+        public void clearLogs()
+        {
+            var path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Logs.txt"));
+            File.WriteAllText(path, String.Empty);
         }
     }
 }
